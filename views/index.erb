@@ -1,8 +1,12 @@
 <html>
-<a href='Play'>"New Game"></a>
-</html>
 
-<div>
-<input type= "text" name = "name">
-<input type= "submit">
-</div>
+<% if @whatyourname  %>
+    <h4>"What's your name?"</h4>
+    <input type="text" name="name">
+    <input type="submit">
+<% else %>
+    <a href="/play">"New Game"</a>
+<% end %>
+
+
+</html>
