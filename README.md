@@ -2,4 +2,4 @@
 
 This repository shows our weekly work on the Battleship web!
 
-![alt tag](http://bit.ly/1FmSeGC)
+![alt tag](http://www.theboardgamefamily.com/wp-content/uploads/2012/05/battleship-red-sink.jpg)
