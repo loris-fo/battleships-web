@@ -1,9 +1,12 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <title>Battleships!</title>
-  <div>
-  <a href="../lib/game.rb">"New Game"</a>
-</div>
-</head>
-<body>
+
+<% if @whatyourname  %>
+    <h4>"What's your name?"</h4>
+    <input type="text" name="name">
+    <input type="submit">
+<% else %>
+    <a href="/play">"New Game"</a>
+<% end %>
+
+
+</html>
