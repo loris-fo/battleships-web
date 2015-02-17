@@ -8,7 +8,7 @@ class BattleShips < Sinatra::Base
   end
 
   get '/play' do
-    @whatyourname = "Henry"
+    @name = ""
     erb :index
   end
 
