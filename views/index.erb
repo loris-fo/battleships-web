@@ -2,10 +2,21 @@
 
 <% if @name  %>
     <h4>"What's your name?"</h4>
+    <form action="/board">
     <input type="text" name="name">
-    <input type="submit">
-<% else %>
+    <input type="submit" >
+    </form>
+
+<% elsif %>
     <a href="/play">"New Game"</a>
+<% elsif %>
+
+
 <% end %>
+
+<% if @board %>
+  <h3>Welcome to the board!</h3>
+  <% else @board %>
+  <% end %>
 
 </html>
