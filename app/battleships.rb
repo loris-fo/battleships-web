@@ -13,7 +13,7 @@ class BattleShips < Sinatra::Base
   end
 
   get '/board' do
-    @board
+    @board = ""
     erb :index
   end
 
