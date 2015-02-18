@@ -1,40 +1,13 @@
-<head>
 
-</head>
-
-
-
-
-
-
-  </body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-</head>
-<body>
-
-<div class="container">
-  <div class="jumbotron">
   <h2 class="text-center">Hello there!</h2>
   <br>
   <h3 class="text-center">Wanna play a battleships game?</h3>
   <br>
   <img class="img-responsive center-block" src="http://bit.ly/1EJ3Uja">
     <br><br>
-    <a href="/play" class="btn btn-danger center-block" role="button">New Game</a>
-    <!--<button href="/play" type="button" class="btn btn-danger center-block">Start Game!</button> -->
+    <a href="/play" class="btn btn-danger center-block" role="button"M+>New Game</a>
 
-    <% if @name  %>
+    <% if @visitor  %>
 
     <h4 class="text-center">What's your name?</h4>
     <form action="/board">
@@ -44,16 +17,5 @@
     <a href="/play"></a>
 <% end %>
 
-<% if @board %>
-  <h3 class="text-center">Welcome to the board!</h3>
-  <img class="center-block" src="http://i.imgur.com/GRRMF.png" />
-  <% else %>
-  <% end %>
-
-  </div>
-</div>
 
 
-
-</body>
-</html>
