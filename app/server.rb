@@ -10,13 +10,13 @@ class BattleShips < Sinatra::Base
 
 get '/play' do
     @visitor = ""
-    erb :index
+    erb :play
   end
 
   get '/board' do
     @board = ""
     @name = params[:name]
-    erb :place_ships
+    erb :board
   end
 
 
