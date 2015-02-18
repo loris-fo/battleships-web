@@ -7,3 +7,9 @@ Feature: Starting the game
     Given I am on the homepage
     When I follow "New Game"
     Then I should see "What's your name?"
+
+  Scenario: No name
+      Given I'm on the play page
+      And I don't enter my name into the form
+      When I click "submit"
+      Then I receive an error message

@@ -5,14 +5,17 @@
   <br>
   <img class="img-responsive center-block" src="http://bit.ly/1EJ3Uja">
     <br><br>
-    <a href="/play" class="btn btn-danger center-block" role="button"M+>New Game</a>
+    <a href="/play" class="btn btn-danger center-block" role="button">New Game</a>
 
     <% if @visitor  %>
 
     <h4 class="text-center">What's your name?</h4>
+
     <form action="/board">
-    <input class="center-block" type="text" name="name" placeholder="Required" required/><input class="center-block" type="submit" >
+    <input class="center-block" type="text" name="name" placeholder="Required">
+    <input value="submit"  name="submit" class="center-block" type="submit">
     </form>
+
 <% elsif %>
     <a href="/play"></a>
 <% end %>
