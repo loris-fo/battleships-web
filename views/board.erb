@@ -1,11 +1,14 @@
 <h3 class="text-center"> Ahoy, <%= @name %> ! </h3>
-<div class="text-center">
+<div class="text-center"></div>
 
+<% 3.times do %><br><% end%>
 
-Floating ships: <%= @board.floating_ships? %>
+<div>
+  Floating ships: <%= @board.floating_ships? %>
+</div>
 
-<br><br>
+<% 3.times do %><br><% end%>
 
-Where's my ship? <%= @get_coordinates %>
-
-  </div>
+<form action="/place_ship" method="post">
+  <input value="placeship"  name="placeship" class="center-block" type="submit" href="/place_ship">
+</form>

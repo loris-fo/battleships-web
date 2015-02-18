@@ -2,23 +2,32 @@ require 'sinatra/base'
 
 class BattleShips < Sinatra::Base
   set :views, Proc.new { File.join(root, "..", "views") }
-
+  enable :sessions
   get '/' do
     erb :index
   end
 
 
   get '/play' do
-    @visitor = ""
+    name = ""
     erb :play
   end
 
-  get '/board' do
+
+
+  post '/board' do
     @board = Board.new :size => 10, :content => Cell
+    session[:board] = @board
     ship = Ship.submarine
-    @place_ship = @board.place(ship, :A1)
-    @get_coordinates = @board.get_coordinates(:A1, 3, :horizontally)
     @name = params[:name]
+    erb :board
+  end
+
+  post '/place_ship' do
+    name = ""
+    ship = Ship.submarine
+    @board = session[:board]
+    @place_ship = @board.place(ship, :A1)
     erb :board
   end
 
