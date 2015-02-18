@@ -17,6 +17,7 @@ class BattleShips < Sinatra::Base
     @board = Board.new :size => 10, :content => Cell
     ship = Ship.submarine
     @place_ship = @board.place(ship, :A1)
+    @get_coordinates = @board.get_coordinates(:A1, 3, :horizontally)
     @name = params[:name]
     erb :board
   end
