@@ -8,8 +8,13 @@ Feature: Starting the game
     When I follow "New Game"
     Then I should see "What's your name?"
 
+  Scenario: Registering
+      Given I am on the play page
+      When I enter "My name"
+      Then I should see the board
+
   Scenario: No name
-      Given I'm on the play page
-      And I don't enter my name into the form
-      When I click "submit"
-      Then I receive an error message
+        Given I'm on the play page
+        And I don't enter my name into the form
+        When I click "submit"
+        Then I receive an error message
