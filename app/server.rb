@@ -3,18 +3,20 @@ require 'sinatra/base'
 class BattleShips < Sinatra::Base
   set :views, Proc.new { File.join(root, "..", "views") }
 
- get '/' do
-   erb :index
- end
+  get '/' do
+    erb :index
+  end
 
 
-get '/play' do
+  get '/play' do
     @visitor = ""
     erb :play
   end
 
   get '/board' do
-    @board = ""
+    @board = Board.new :size => 10, :content => Cell
+    ship = Ship.submarine
+    @place_ship = @board.place(ship, :A1)
     @name = params[:name]
     erb :board
   end

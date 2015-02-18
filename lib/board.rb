@@ -13,7 +13,7 @@ class Board
 
   def shoot_at(coord)
     raise "You can't hit the same cell twice" if grid[coord].hit?
-    grid[coord].shoot
+    grid[co/ord].shoot
   end
 
   def place(ship, coordinate, orientation = :horizontally)
