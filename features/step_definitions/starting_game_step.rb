@@ -7,5 +7,5 @@ When(/^I follow "(.*?)"$/) do |arg1|
 end
 
 Then(/^I should see "(.*?)"$/) do |name|
-fill_in('name', :with => 'John')
+body.should match(/#{name}/m)
 end

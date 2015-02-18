@@ -1,12 +1,21 @@
-<html>
 
-<% if @whatyourname  %>
-    <h4>"What's your name?"</h4>
-    <input type="text" name="name">
-    <input type="submit">
-<% else %>
-    <a href="/play">"New Game"</a>
+  <h2 class="text-center">Hello there!</h2>
+  <br>
+  <h3 class="text-center">Wanna play a battleships game?</h3>
+  <br>
+  <img class="img-responsive center-block" src="http://bit.ly/1EJ3Uja">
+    <br><br>
+    <a href="/play" class="btn btn-danger center-block" role="button"M+>New Game</a>
+
+    <% if @visitor  %>
+
+    <h4 class="text-center">What's your name?</h4>
+    <form action="/board">
+    <input class="center-block" type="text" name="name" placeholder="Required" required/><input class="center-block" type="submit" >
+    </form>
+<% elsif %>
+    <a href="/play"></a>
 <% end %>
 
 
-</html>
+

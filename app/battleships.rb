@@ -7,10 +7,18 @@ class BattleShips < Sinatra::Base
    erb :index
  end
 
- get '/play' do
-   @whatyourname = "Henry"
-   erb :index
- end
+
+get '/play' do
+    @visitor = ""
+    erb :index
+  end
+
+  get '/board' do
+    @board = ""
+    @name = params[:name]
+    erb :place_ships
+  end
+
 
 
  # start the server if ruby file executed directly
