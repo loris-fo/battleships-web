@@ -9,7 +9,7 @@ class BattleShips < Sinatra::Base
 
 
   get '/play' do
-    name = ""
+    @name = params[:name]
     erb :play
   end
 
@@ -19,12 +19,12 @@ class BattleShips < Sinatra::Base
     @board = Board.new :size => 10, :content => Cell
     session[:board] = @board
     ship = Ship.submarine
-    @name = params[:name]
+    @name, session[:name] = params[:name], params[:name]
     erb :board
   end
 
   post '/place_ship' do
-    name = ""
+    @name = session[:name]
     ship = Ship.submarine
     @board = session[:board]
     @place_ship = @board.place(ship, :A1)
